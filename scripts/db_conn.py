@@ -4,8 +4,8 @@ import MySQLdb
 
 class DBConn:
 
-    def __init__(self, db_host='localhost', db_user='root', db_pass='1001',
-                 db_name='aysiaysi'):
+    def __init__(self, db_host='localhost', db_user='root', db_pass='1000',
+                 db_name='arcbd'):
         self.db_host = db_host
         self.db_user = db_user
         self.db_pass = db_pass

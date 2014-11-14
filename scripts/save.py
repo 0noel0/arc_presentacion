@@ -7,6 +7,7 @@ import time
 import serial
 
 db1 = DBConn()
+#arduino=serial.Serial('/dev/ttyACM1',baudrate=9600, timeout = 5.0)
 arduino=serial.Serial('/dev/ttyACM0',baudrate=9600, timeout = 5.0)
 arduino.open()
 values=0
@@ -18,7 +19,7 @@ while True:
 #freq=arduino.write(12) -- Esta linea se activa para enviar una lectura a el #codigo arduino para que lea desde el puerto serial
 #y hay que modificar el .ino tambien para no lea desde
 #el potenciometro sino desde el puerto serial
-		db = MySQLdb.connect(host="localhost", user="root", passwd="1001", db="aysiaysi")
+		db = MySQLdb.connect(host="localhost", user="root", passwd="1000", db="arcbd")
 		cursor = db.cursor()
 		cursor.execute("SELECT potenciometro FROM potenciometro ORDER BY fecha DESC LIMIT 0,1")
 		for row in cursor:
