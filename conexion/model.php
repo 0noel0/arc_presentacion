@@ -12,7 +12,7 @@ class model{
 		$this->mysql = new mysql;
 		$this->mysql->server   = "localhost";
 		$this->mysql->user     = "root";
-		$this->mysql->pass     = "35391291";
+		$this->mysql->pass     = "1001";
 		$this->mysql->connect();
 		$this->mysql->select("aysiaysi"); 
 		
@@ -29,7 +29,7 @@ class model{
 
 	function insertar($frecuencia){
 
-		return $this->mysql->query("INSERT INTO lecturas(lectura) VALUES($frecuencia)  "); 
+		return $this->mysql->query("INSERT INTO potenciometro(potenciometro) VALUES($frecuencia)"); 
 			
 	}
 

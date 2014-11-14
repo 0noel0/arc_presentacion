@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -80,100 +80,103 @@
             <!-- /.navbar-collapse -->
         </nav>
 
-        <div id="page-wrapper">
+        <div class="container centered" id="page-wrapper" >
 
-            <div class="container-fluid">
+            <div class="container-fluid col-centered">
 
-                <div class="page-header">
-                    <h1>Materiales Utilizados en el proyecto</h1>
-                </div>
-
+                <!-- Page Heading -->
                 <div class="row">
-                    <div class="col-sm-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Arduino</h3>
-                            </div>
-                            <div class="panel-body">
-                              
-                            </div>
-                        </div>
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Raspberry PI</h3>
-                                </div>
-                            <div class="panel-body">
+                    <div class="col-lg-12 col-centered">
+                        <h1 class="page-header">
+Galería                        </h1>                        
+                    </div>
+
+
+             <div class="container centered">     
+Seleccione los nodos que quiere crear
+                    <figure>
+                        <img id="simulacion" src="imagenes/circuito.jpg"  width="800" height="600">
+                    </figure>
+<form>
+<label class="checkbox-inline">
+  <input type="radio" id="boton1" name="radio" value="opcion_1"> 1
+</label>
+<label class="checkbox-inline">
+  <input type="radio" id="boton2" name="radio" value="opcion_2"> 2
+</label>
+<label class="checkbox-inline">
+  <input type="radio" id="boton3" name="radio" value="opcion_3"> 3
+</label> 
+<label class="checkbox-inline">
+  <input type="radio" id="boton4" name="radio" value="opcion_1"> 4
+</label>  
+<label class="checkbox-inline">
+  <input type="radio" id="boton5" name="radio" value="opcion_3"> 5
+</label> 
+<label class="checkbox-inline">
+  <input type="radio" id="boton6" name="radio" value="opcion_3"> 6
+</label> 
+<label class="checkbox-inline">
+  <input type="radio" id="boton7" name="radio" value="opcion_3"> 7
+</label> 
+<label class="checkbox-inline">
+  <input type="radio" id="boton8" name="radio" value="opcion_3"> 8
+</label> 
+ 
+</form> 
+
+</div>     <!-- <button id="boton1">2 Nodos</button>
+                    <button id="boton2">3 Nodos</button>
+                    <button id="boton3">4 Nodos</button>
+                    <button id="boton4">5 Nodos</button>
+                    <button id="boton5">6 Nodos</button>
+
+                       -->
+                     
                              
-                            </div>
-                            </div>
                           
-
-                 <div class="panel panel-red">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Polea</h3>
-                            </div>
-                            <div class="panel-body">
-                             <img src="imagenes/polea.jpg">
-                            </div>
-                            </div>
-                            </div>
-
-                    <!-- /.col-sm-4 -->
-                    <div class="row">
-                    <div class="col-sm-6">
-                        
-                           
-                        <div class="panel panel-warning">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Bocina</h3>
-                            </div>
-                            <div class="panel-body">
-                            <img src="imagenes/boc.jpg">
-                              
-                   
-                                  
-                            </div>
-                            </div>
-                            </div>
-                        <!-- /.col-sm-4 -->
-                    <div class="col-sm-6">
-                        <div class="panel panel-green">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Cuerda</h3>
-                            </div>
-                            <div class="panel-body">
-                            <img src="imagenes/boc2.jpg">
-                               
-                                   
-                            </div>
-                            </div>
-                           
-                            
-                        <div class="panel panel-danger">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Montaje completo</h3>
-                            </div>
-                            <div class="panel-body">
-                            <img src="imagenes/completo.jpg">
-                                                       </div>
-                            </div>
-                             
-                </div>            
-
+              
             </div>
             <!-- /.container-fluid -->
 
+        </div>
+        <!-- /#page-wrapper -->
 
     </div>
     <!-- /#wrapper -->
+    </div>
 
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
+<script src="js/jquery.js"></script>
+<script>
+    $(document).on('ready', function(){
+        $('#boton1').on('click', function(){
+            $('#simulacion').attr("src", "imagenes/circuito.jpg");
+        });
+         $('#boton2').on('click', function(){
+            $('#simulacion').attr("src", "imagenes/completo.jpg");
+        });
+        $('#boton3').on('click', function(){
+            $('#simulacion').attr("src", "imagenes/arduinoPotenciometro.jpg");
+        });
+        $('#boton4').on('click', function(){
+            $('#simulacion').attr("src", "imagenes/montaje1.jpg");
+        });
+        $('#boton5').on('click', function(){
+            $('#simulacion').attr("src", "imagenes/routerPi.jpg");
+        });
+        $('#boton6').on('click', function(){
+            $('#simulacion').attr("src", "imagenes/montaje3.jpg");
+        });
+        $('#boton7').on('click', function(){
+            $('#simulacion').attr("src", "imagenes/patard.jpg");
+        });
+        $('#boton8').on('click', function(){
+            $('#simulacion').attr("src", "imagenes/completo2.jpg");
+        });
+        $('#boton9').on('click', function(){
+            $('#simulacion').attr("src", "imagenes/completo2.jpg");
+        });
+    });
+</script>
 </body>
 
-</html>
