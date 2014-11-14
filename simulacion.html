@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -63,7 +63,11 @@
                     <li>
                         <a href="resultados.html"><i class="fa fa-fw fa-bar-chart-o"></i> Resultados</a>
                     </li>
+<<<<<<< HEAD
                      <li class="active">
+=======
+                                     <li class="active">
+>>>>>>> 42633dd6801d575ff1cb1b1e30497ace80c4c8d1
                         <a href="simulacion.html"><i class="fa fa-fw fa-file"></i> Simulación</a>
                     </li>
                      
@@ -80,26 +84,48 @@
             <!-- /.navbar-collapse -->
         </nav>
 
-        <div id="page-wrapper">
+        <div class="container centered" id="page-wrapper" >
 
-            <div class="container-fluid">
+            <div class="container-fluid col-centered">
 
                 <!-- Page Heading -->
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-centered">
                         <h1 class="page-header">
                            Simulación 
                         </h1>                        
                     </div>
+
+
+             <div class="container centered">     
+Seleccione los nodos que quiere crear
                     <figure>
-                        <img id="simulacion" src="imagenes/Arduino.jpg"  width="800" height="600">
+                        <img id="simulacion" src="imagenes/proyecto.jpg"  width="800" height="600">
                     </figure>
+<form>
+<label class="checkbox-inline">
+  <input type="radio" id="boton1" name="radio" value="opcion_1"> 2
+</label>
+<label class="checkbox-inline">
+  <input type="radio" id="boton2" name="radio" value="opcion_2"> 4
+</label>
+<label class="checkbox-inline">
+  <input type="radio" id="boton3" name="radio" value="opcion_3"> 5
+</label> 
+<label class="checkbox-inline">
+  <input type="radio" id="boton4" name="radio" value="opcion_1"> 6
+</label>   
+</form> 
 
-                    <button id="boton1">Raspi!</button>
-                    <button id="boton2">Arduino!</button>
+</div>     <!-- <button id="boton1">2 Nodos</button>
+                    <button id="boton2">3 Nodos</button>
+                    <button id="boton3">4 Nodos</button>
+                    <button id="boton4">5 Nodos</button>
+                    <button id="boton5">6 Nodos</button>
 
-                       
-                              
+                       -->
+                     
+                             
                           
               
             </div>
@@ -116,10 +142,19 @@
 <script>
     $(document).on('ready', function(){
         $('#boton1').on('click', function(){
-            $('#simulacion').attr("src", "imagenes/RaspberryPi.jpg");
+            $('#simulacion').attr("src", "imagenes/2Nodos.gif");
         });
          $('#boton2').on('click', function(){
-            $('#simulacion').attr("src", "imagenes/Arduino.jpg");
+            $('#simulacion').attr("src", "imagenes/3Nodos.gif");
+        });
+        $('#boton3').on('click', function(){
+            $('#simulacion').attr("src", "imagenes/4Nodos.gif");
+        });
+        $('#boton4').on('click', function(){
+            $('#simulacion').attr("src", "imagenes/5Nodos.gif");
+        });
+        $('#boton5').on('click', function(){
+            $('#simulacion').attr("src", "imagenes/6Nodos.gif");
         });
     });
 </script>
