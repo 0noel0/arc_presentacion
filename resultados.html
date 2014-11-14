@@ -46,6 +46,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/highcharts.js"></script>
     <script src="js/exporting.js"></script>
+
     <script type="text/javascript">
     $(function () {
         $(document).ready(function() {
@@ -83,12 +84,12 @@
                                 var x = (new Date()).getTime(), // current time
                                     y = parseInt(response);
                                 series.addPoint([x, y], true, true);
-                            }, 1000);
+                            }, 600);
                         }
                     }
                 },
                 title: {
-                    text: 'Grafica  de  ... '
+                    text: 'Grafico de Frecuencia vrs Tiempo '
                 },
                 xAxis: {
                     type: 'datetime',
@@ -96,7 +97,7 @@
                 },
                 yAxis: {
                     title: {
-                        text: 'Value'
+                        text: 'Frecuencia en Hrz'
                     },
                     plotLines: [{
                         value: 0,
@@ -118,7 +119,7 @@
                     enabled: false
                 },
                 series: [{
-                    name: 'Información del nodo',
+                    name: 'Frecuencia/Tiempo',
                     data: (function() {
                         var data = [],
                             time = (new Date()).getTime(),
@@ -243,8 +244,8 @@ $(document).on('ready', function(){
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="slider">
-                          <input id="range" type="range" min="100" max="1000" step="50">
-                          <input id="rangeValue" type="text" readonly>
+                          <input id="range" type="range" min="0" max="1023" step="1">
+                          <input id="rangeValue" type="text"  class="form-control" readonly>
                         </div>
                     </div>
                 </div>
@@ -271,7 +272,7 @@ $(document).on('ready', function(){
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Datos relevantes</h3>
+                                <h3 class="panel-title center"><i class="fa fa-money fa-fw"></i> Datos en Tiempo Real</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="table-responsive">
