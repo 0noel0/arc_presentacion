@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <script src="js/control.js"></script>
+   
     <title>Simulación</title>
 
     <!-- Bootstrap Core CSS -->
@@ -26,7 +26,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    
 </head>
 
 <body>
@@ -63,11 +63,8 @@
                     <li>
                         <a href="resultados.html"><i class="fa fa-fw fa-bar-chart-o"></i> Resultados</a>
                     </li>
-<<<<<<< HEAD
                      <li class="active">
-=======
-                                     <li class="active">
->>>>>>> 42633dd6801d575ff1cb1b1e30497ace80c4c8d1
+
                         <a href="simulacion.html"><i class="fa fa-fw fa-file"></i> Simulación</a>
                     </li>
                      
@@ -139,6 +136,50 @@ Seleccione los nodos que quiere crear
     </div>
 
 <script src="js/jquery.js"></script>
+ <script src="js/control.js"></script>
+  <script src="js/highcharts.js"></script>
+    <script src="js/exporting.js"></script>
+<script type="text/javascript">
+    
+                                /**************  Comunicacion con el server por ajax  **************/
+          $(document).on('ready', function(){
+             setInterval(function() {
+                                $.ajax({
+                                    url: 'conexion/controller.php',
+                                    type: 'POST',
+                                    success: function(info){  //funcion que se ejecutara cuando el servidor de una respuesta
+                                        console.log(info); //info son los datos que devuelve el servidor
+                                        response = parseInt(info);
+                                         if(response>=80 && response<=90)
+                                            {
+                                                $('#simulacion').attr("src", "imagenes/2Nodos.gif");
+                                            }
+                                         if(response>=117 && response<=127)
+                                            {
+                                                $('#simulacion').attr("src", "imagenes/3Nodos.gif");
+                                            }
+                                         if(response>=167 && response<=177)
+                                            {
+                                                $('#simulacion').attr("src", "imagenes/4Nodos.gif");
+                                            }
+                                         if(response>=198 && response<=208)
+                                            {
+                                                $('#simulacion').attr("src", "imagenes/5Nodos.gif");
+                                            }
+                                         if(response>=151 && response<=161)
+                                            {
+                                                $('#simulacion').attr("src", "imagenes/6Nodos.gif");
+                                            }
+                                    },
+                                    error: function(jqXHR, estado, error){ //en caso de error, se ejecuta esto 
+                                        console.log(error);
+                                        console.log(estado);
+                                    }//,timeout: 10000 //tiempo maximo de espera por la peticion
+                                });
+                                
+                            }, 600);
+            });
+</script>
 <script>
     $(document).on('ready', function(){
         $('#boton1').on('click', function(){

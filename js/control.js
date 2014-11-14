@@ -94,9 +94,9 @@ $(document).on('ready', function(){
     $('#range').on('change', function(){
         valorRange = $(this).val();
         $(rangeValue).val(valorRange);
-        if(valorRange>=100)
+        if(valorRange>=100 && valorRange<=300)
         {
-            $('#simulacion').attr("src", "imagenes/RaspberryPi.jpg");
+            $('#simulacion').attr("src", "imagenes/6Nodos.gif");
         }
         /**************  Comunicacion con el server por ajax  **************/
             $.ajax({
