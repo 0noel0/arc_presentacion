@@ -11,10 +11,10 @@ class model{
 	function __construct() {
 		$this->mysql = new mysql;
 		$this->mysql->server   = "localhost";
-		$this->mysql->user     = "root";
-		$this->mysql->pass     = "1000";
+		$this->mysql->user     = "admin";
+		$this->mysql->pass     = "1001";
 		$this->mysql->connect();
-		$this->mysql->select("arcbd"); 
+		$this->mysql->select("arcdb"); 
 		
    }
 

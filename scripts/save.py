@@ -19,7 +19,7 @@ while True:
 #freq=arduino.write(12) -- Esta linea se activa para enviar una lectura a el #codigo arduino para que lea desde el puerto serial
 #y hay que modificar el .ino tambien para no lea desde
 #el potenciometro sino desde el puerto serial
-		db = MySQLdb.connect(host="localhost", user="root", passwd="1000", db="arcbd")
+		db = MySQLdb.connect(host="localhost", user="admin", passwd="1001", db="arcdb")
 		cursor = db.cursor()
 		cursor.execute("SELECT potenciometro FROM potenciometro ORDER BY fecha DESC LIMIT 0,1")
 		for row in cursor:
