@@ -4,7 +4,7 @@ import MySQLdb
 
 class DBConn:
 
-    def __init__(self, db_host='localhost', db_user='admin', db_pass='1001',
+    def __init__(self, db_host='localhost', db_user='root', db_pass='1000',
                  db_name='arcdb'):
         self.db_host = db_host
         self.db_user = db_user
