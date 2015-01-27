@@ -9,6 +9,7 @@ import serial
 db1 = DBConn()
 #arduino=serial.Serial('/dev/ttyACM1',baudrate=9600, timeout = 5.0)
 arduino=serial.Serial('/dev/ttyACM0',baudrate=9600, timeout = 5.0)
+arduino.close()
 arduino.open()
 values=0
 varaux=0
