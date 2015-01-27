@@ -5,11 +5,14 @@ $pdf=new FPDF();
 $pdf->AddPage();
 $pdf->SetTextColor(0,16,87);
 $pdf->SetFont('Arial','B',16);
-$pdf->Cell(200, 10,'Datos Generados', 0, 1, 'C');
+$pdf->Image('logoFia.jpg',15,10,-200);
+
+$pdf->Cell(200, 10,'Datos Generados', 0, 1, 'C',);
 $pdf->Cell(200, 10,'Lecturas y Potenciometro', 0, 1, 'C');
 
 $pdf->Ln(20);
-$pdf->SetTextColor(0,0,0);
+//$pdf->SetFillColor(0,0,0);
+$pdf->SetTextColor(0,1,0);
 $pdf->SetFont('Arial','B',12);
 $pdf->Cell(60, 10,'Lecturas', 1, 'C');
 $pdf->Cell(1,10, ' ', 0,'C');
@@ -61,9 +64,9 @@ $pdf->AddPage();
 // Encabezado pag2
 $pdf->SetTextColor(0,16,87);
 $pdf->setFont('Arial','B',16);
-$pdf->Cell(200,10,'Resultados.',0,1,'C');
+$pdf->Cell(175,10,'Resultados.',0,1,'C');
 $pdf->Ln(20);
-//$pdf->SetFillColor(16,22,41);
+$pdf->SetFillColor(16,22,41);
 $pdf->SetTextColor(0,2,51);
 $pdf->SetFont('Arial','B',12);
 $pdf->Cell(17,10,'Nodos',1,'C');
